@@ -3,7 +3,7 @@
 ## Project Overview
 This project presents an executive BI solution designed to audit logistics contractor efficiency and discover hidden operational drains in the China–Belarus rail container corridor (terminating at Kolyadichi station, Minsk). By shifting flat transactional log data into an interactive analytics dashboard, this report provides the Commercial Director with immediate data-driven leverage to eliminate supplier-induced losses.
 
-<img src="./02_logistics_dashboard.png" width="600">
+ <img src="./02_logistics_dashboard.png" width="600">
 
 
 ## Business Case & Financial Impact
@@ -15,7 +15,7 @@ The underlying MySQL database modeling 500 shipments utilizes a strict Star Sche
 * `carriers` & `routes` (Dimension tables for granular filtering).
 * `demurrage_claims` (Financial dimension calculating penalties at $50/day post-free-time).
 
-<img src="./01_data_model_schema.png" width="600">
+ <img src="./01_data_model_schema.png" width="600">
 
 
 ## Key Logistics Metrics (DAX)
@@ -34,7 +34,7 @@ The underlying MySQL database modeling 500 shipments utilizes a strict Star Sche
 ## Обзор проекта
 Этот проект представляет собой BI-решение для проверки эффективности логистических подрядчиков и выявления скрытых операционных потерь в контейнерном коридоре Китай–Беларусь (терминал — станция Колядичи, Минск). После преобразования плоских логов транзакций в интерактивный дашборд этот отчёт даёт коммерческому директору возможность принимать решения на основе данных, чтобы устранять убытки, вызванные поставщиками.
 
-<img src="./02_logistics_dashboard.png" width="600">
+ <img src="./02_logistics_dashboard.png" width="600">
 
 
 ## Бизнес-кейс и финансовое влияние
@@ -46,7 +46,7 @@ The underlying MySQL database modeling 500 shipments utilizes a strict Star Sche
 * `carriers` и `routes` (таблицы измерений для детальной фильтрации).
 * `demurrage_claims` (финансовое измерение, рассчитывающее штрафы по ставке $50/день после окончания бесплатного срока).
 
-<img src="./01_data_model_schema.png" width="600">
+ <img src="./01_data_model_schema.png" width="600">
 
 
 ## Ключевые логистические метрики (DAX)
