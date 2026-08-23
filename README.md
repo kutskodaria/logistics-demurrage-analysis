@@ -3,7 +3,11 @@
 ## Project Overview
 This project presents an executive BI solution designed to audit logistics contractor efficiency and discover hidden operational drains in the China–Belarus rail container corridor (terminating at Kolyadichi station, Minsk). By shifting flat transactional log data into an interactive analytics dashboard, this report provides the Commercial Director with immediate data-driven leverage to eliminate supplier-induced losses.
 
- <img src="./02_logistics_dashboard.png" width="600">
+ <p align="center">
+  <img src="./02_logistics_dashboard.png" width="700">
+</p>
+
+ [Download Power BI Dashboard (China_Belarus_Logistics_Analysis.pbix)](./China_Belarus_Logistics_Analysis.pbix)
 
 
 ## Business Case & Financial Impact
@@ -34,7 +38,11 @@ The underlying MySQL database modeling 500 shipments utilizes a strict Star Sche
 ## Обзор проекта
 Этот проект представляет собой BI-решение для проверки эффективности логистических подрядчиков и выявления скрытых операционных потерь в контейнерном коридоре Китай–Беларусь (терминал — станция Колядичи, Минск). После преобразования плоских логов транзакций в интерактивный дашборд этот отчёт даёт коммерческому директору возможность принимать решения на основе данных, чтобы устранять убытки, вызванные поставщиками.
 
- <img src="./02_logistics_dashboard.png" width="600">
+ <p align="center">
+  <img src="./02_logistics_dashboard.png" width="700">
+</p>
+
+ [Скачать Power BI Dashboard (China_Belarus_Logistics_Analysis.pbix)](./China_Belarus_Logistics_Analysis.pbix)
 
 
 ## Бизнес-кейс и финансовое влияние
