@@ -19,9 +19,10 @@ The underlying MySQL database modeling 500 shipments utilizes a strict Star Sche
 * `carriers` & `routes` (Dimension tables for granular filtering).
 * `demurrage_claims` (Financial dimension calculating penalties at $50/day post-free-time).
 
-  <p align="center">
- <img src="./01_data_model_schema.png" width="600">
+<p align="center">
+  <img src="./01_data_model_schema.png" width="700">
 </p>
+
 
 ## Key Logistics Metrics (DAX)
 * **OTIF % (On-Time In-Full Rate):** Evaluates carrier reliability by tracking deliveries made on or before the planned target date.
@@ -56,8 +57,9 @@ The underlying MySQL database modeling 500 shipments utilizes a strict Star Sche
 * `demurrage_claims` (финансовое измерение, рассчитывающее штрафы по ставке $50/день после окончания бесплатного срока).
 
   <p align="center">
- <img src="./01_data_model_schema.png" width="600">
+  <img src="./01_data_model_schema.png" width="700">
 </p>
+
 
 ## Ключевые логистические метрики (DAX)
 * **OTIF % (On-Time In-Full Rate):** Показатель надёжности перевозчика, отслеживающий доставки, выполненные в срок или раньше плана.
