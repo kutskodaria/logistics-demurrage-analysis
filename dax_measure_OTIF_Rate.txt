@@ -1,0 +1,9 @@
+Total_OTIF_Rate = 
+DIVIDE(
+    CALCULATE(
+        COUNT(shipments[shipment_id]), 
+        shipments[actual_delivery_date] <= shipments[planned_delivery_date]
+    ), 
+    COUNT(shipments[shipment_id]), 
+    0
+) * 100
