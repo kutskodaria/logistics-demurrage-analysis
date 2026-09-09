@@ -41,6 +41,9 @@ All SQL scripts used to build the database and run the analysis are in the [`sql
 * **OTIF % (On-Time In-Full Rate):** Evaluates carrier reliability by tracking deliveries made on or before the planned target date.
 * **Total Demurrage Losses (USD):** Aggregates financial penalties directly correlated with carrier performance.
 
+The DAX measure used in the dashboard is available in the [`dax/`](./dax) folder:
+
+
 ## Analytical Insights
 * **The Culprit Found:** While *RZD Logistics* and *Eurasia Rail Express* maintained excellent reliability (OTIF ~90-95%) with zero demurrage losses, **Sinotrans Heavy plummeted to an OTIF of just 19%**.
 * **Actionable Outcome:** The dashboard provides clear evidence to cut volumes or renegotiate SLA terms with Sinotrans Heavy, preserving $42,600+ in corporate liquidity annually.
@@ -90,6 +93,9 @@ All SQL scripts used to build the database and run the analysis are in the [`sql
 ## Ключевые логистические метрики (DAX)
 * **OTIF % (On-Time In-Full Rate):** Показатель надёжности перевозчика, отслеживающий доставки, выполненные в срок или раньше плана.
 * **Общие потери от демереджа (USD):** Агрегирует финансовые штрафы, напрямую связанные с эффективностью перевозчика.
+
+DAX-мера, использованная в дашборде, находится в папке [`dax/`](./dax):
+
 
 ## Аналитические выводы
 * **Итог:** В то время как *RZD Logistics* и *Eurasia Rail Express* показали отличную надёжность (OTIF ~90-95%) с нулевыми потерями от демереджа, **показатель Sinotrans Heavy упал до 19%**.
