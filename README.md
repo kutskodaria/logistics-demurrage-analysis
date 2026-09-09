@@ -18,6 +18,7 @@ The underlying MySQL database modeling 500 shipments utilizes a strict Star Sche
 * `shipments` (Fact table capturing planned vs. actual delivery dates).
 * `carriers` & `routes` (Dimension tables for granular filtering).
 * `demurrage_claims` (Financial dimension calculating penalties at $50/day post-free-time).
+  The `routes` and `carriers` dimension tables are linked to the central `shipments` fact table via a one-to-many relationship with unidirectional filtering, while the `claims` financial table is connected via a one-to-one relationship with bidirectional filtering to enable end-to-end cost analysis.
 
 <p align="center">
   <img src="./01_data_model_schema.png" width="700">
@@ -38,7 +39,7 @@ The underlying MySQL database modeling 500 shipments utilizes a strict Star Sche
 # Анализ эффективности перевозчиков и убытков от демереджа (Коридор Китай – Беларусь)
 
 ## Обзор проекта
-Этот проект представляет собой BI-решение для проверки эффективности логистических подрядчиков и выявления скрытых операционных потерь в контейнерном коридоре Китай–Беларусь (терминал — станция Колядичи, Минск). После преобразования плоских логов транзакций в интерактивный дашборд этот отчёт даёт коммерческому директору возможность принимать решения на основе данных, чтобы устранять убытки, вызванные поставщиками.
+Этот проект представляет собой BI-решение для проверки эффективности логистических подрядчиков и выявления скрытых операционных потерь в контейнерном коридоре Китай–Беларусь (терминал — станция Колядичи, Минск). 
 
  <p align="center">
   <img src="./02_logistics_dashboard.png" width="700">
@@ -47,7 +48,7 @@ The underlying MySQL database modeling 500 shipments utilizes a strict Star Sche
  [Скачать Power BI Dashboard (China_Belarus_Logistics_Report.pbix)](./China_Belarus_Logistics_Report.pbix)
 
 
-## Бизнес-кейс и финансовое влияние
+## Суть проекта
 Компания понесла серьёзный ущерб в размере **$42 600 в виде штрафов за демередж** из-за превышения контейнерами срока бесплатного хранения на терминале (7 дней). Хотя операционный отдел винил в этом загруженность терминала, анализ данных выявил, что коренной причиной стали системные задержки в пути, вызванные одним государственным перевозчиком — **Sinotrans Heavy**.
 
 ## Архитектура данных (Схема «Звезда»)
@@ -55,6 +56,7 @@ The underlying MySQL database modeling 500 shipments utilizes a strict Star Sche
 * `shipments` (таблица фактов: плановые и фактические даты доставки).
 * `carriers` и `routes` (таблицы измерений для детальной фильтрации).
 * `demurrage_claims` (финансовое измерение, рассчитывающее штрафы по ставке $50/день после окончания бесплатного срока).
+  Таблицы измерений routes и carriers связаны с центральной таблицей фактов shipments отношением "один ко многим" с однонаправленной фильтрацией, а финансовая таблица claims привязана отношением "один к одному" с двунаправленным типом фильтрации для сквозного анализа затрат.
 
   <p align="center">
   <img src="./01_data_model_schema.png" width="700">
@@ -66,5 +68,5 @@ The underlying MySQL database modeling 500 shipments utilizes a strict Star Sche
 * **Общие потери от демереджа (USD):** Агрегирует финансовые штрафы, напрямую связанные с эффективностью перевозчика.
 
 ## Аналитические выводы
-* **Виновный найден:** В то время как *RZD Logistics* и *Eurasia Rail Express* показали отличную надёжность (OTIF ~90-95%) с нулевыми потерями от демереджа, **показатель Sinotrans Heavy упал до 19%**.
+* **Итог:** В то время как *RZD Logistics* и *Eurasia Rail Express* показали отличную надёжность (OTIF ~90-95%) с нулевыми потерями от демереджа, **показатель Sinotrans Heavy упал до 19%**.
 * **Практический результат:** Дашборд даёт чёткие доказательства для сокращения объёмов или пересмотра условий SLA с Sinotrans Heavy, что позволит сохранять $42,600+ в год в виде корпоративной ликвидности.
