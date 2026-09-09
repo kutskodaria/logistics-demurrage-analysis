@@ -1,7 +1,7 @@
 # Supply Chain Performance & Demurrage Losses Analysis (China – Belarus Corridor)
 
 ## Project Overview
-This project presents an executive BI solution designed to audit logistics contractor efficiency and discover hidden operational drains in the China–Belarus rail container corridor (terminating at Kolyadichi station, Minsk). By shifting flat transactional log data into an interactive analytics dashboard, this report provides the Commercial Director with immediate data-driven leverage to eliminate supplier-induced losses.
+ This project presents an executive BI solution designed to audit logistics contractor efficiency and discover hidden operational drains in the China–Belarus rail container corridor (terminating at Kolyadichi station, Minsk). By shifting flat transactional log data into an interactive analytics dashboard, this report provides the Commercial Director with immediate data-driven leverage to eliminate supplier-induced losses.
 
  <p align="center">
   <img src="./02_logistics_dashboard.png" width="700">
@@ -11,13 +11,14 @@ This project presents an executive BI solution designed to audit logistics contr
 
 
 ## Business Case & Financial Impact
-The company incurred a severe penalty of **$42,600 in demurrage claims** due to containers overstaying at the rail terminal past the standard 7 free days. While operations blamed terminal congestion, this data audit revealed that the root cause was systemic transit delays by a single state-owned contractor, **Sinotrans Heavy**.
+ The company incurred a severe penalty of **$42,600 in demurrage claims** due to containers overstaying at the rail terminal past the standard 7 free days. While operations blamed terminal congestion, this data audit revealed that the root cause was systemic transit delays by a single state-owned contractor, **Sinotrans Heavy**.
 
 ## Data Architecture (Star Schema)
-The underlying MySQL database modeling 500 shipments utilizes a strict Star Schema architecture:
+ The underlying MySQL database modeling 500 shipments utilizes a strict Star Schema architecture:
 * `shipments` (Fact table capturing planned vs. actual delivery dates).
 * `carriers` & `routes` (Dimension tables for granular filtering).
 * `demurrage_claims` (Financial dimension calculating penalties at $50/day post-free-time).
+  
   The `routes` and `carriers` dimension tables are linked to the central `shipments` fact table via a one-to-many relationship with unidirectional filtering, while the `claims` financial table is connected via a one-to-one relationship with bidirectional filtering to enable end-to-end cost analysis.
 
 <p align="center">
@@ -39,7 +40,7 @@ The underlying MySQL database modeling 500 shipments utilizes a strict Star Sche
 # Анализ эффективности перевозчиков и убытков от демереджа (Коридор Китай – Беларусь)
 
 ## Обзор проекта
-Этот проект представляет собой BI-решение для проверки эффективности логистических подрядчиков и выявления скрытых операционных потерь в контейнерном коридоре Китай–Беларусь (терминал — станция Колядичи, Минск). 
+ Этот проект представляет собой BI-решение для проверки эффективности логистических подрядчиков и выявления скрытых операционных потерь в контейнерном коридоре Китай–Беларусь (терминал — станция Колядичи, Минск). 
 
  <p align="center">
   <img src="./02_logistics_dashboard.png" width="700">
@@ -49,13 +50,14 @@ The underlying MySQL database modeling 500 shipments utilizes a strict Star Sche
 
 
 ## Суть проекта
-Компания понесла серьёзный ущерб в размере **$42 600 в виде штрафов за демередж** из-за превышения контейнерами срока бесплатного хранения на терминале (7 дней). Хотя операционный отдел винил в этом загруженность терминала, анализ данных выявил, что коренной причиной стали системные задержки в пути, вызванные одним государственным перевозчиком — **Sinotrans Heavy**.
+ Компания понесла серьёзный ущерб в размере **$42 600 в виде штрафов за демередж** из-за превышения контейнерами срока бесплатного хранения на терминале (7 дней). Хотя операционный отдел винил в этом загруженность терминала, анализ данных выявил, что коренной причиной стали системные задержки в пути, вызванные одним государственным перевозчиком — **Sinotrans Heavy**.
 
 ## Архитектура данных (Схема «Звезда»)
-База данных MySQL, моделирующая 500 поставок, построена по строгой схеме «Звезда»:
+ База данных MySQL, моделирующая 500 поставок, построена по строгой схеме «Звезда»:
 * `shipments` (таблица фактов: плановые и фактические даты доставки).
 * `carriers` и `routes` (таблицы измерений для детальной фильтрации).
 * `demurrage_claims` (финансовое измерение, рассчитывающее штрафы по ставке $50/день после окончания бесплатного срока).
+  
   Таблицы измерений routes и carriers связаны с центральной таблицей фактов shipments отношением "один ко многим" с однонаправленной фильтрацией, а финансовая таблица claims привязана отношением "один к одному" с двунаправленным типом фильтрации для сквозного анализа затрат.
 
   <p align="center">
