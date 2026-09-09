@@ -32,9 +32,9 @@ All SQL scripts used to build the database and run the analysis are in the [`sql
 
 | Script | Description |
 |--------|-------------|
-| `01_create_tables.sql` | Creates the full database schema |
-| `02_insert_data.sql` | Generates 500+ realistic shipment records |
-| `03_analysis_queries.sql` | Calculates OTIF, demurrage losses, and carrier performance metrics |
+| `01_create_tables.sql`](./sql/01_create_tables.sql) | Creates the full database schema |
+| `02_insert_data.sql`](./sql/02_insert_data.sql) | Generates 500+ realistic shipment records |
+| `03_analysis_queries.sql`](./sql/03_analysis_queries.sql) | Calculates OTIF, demurrage losses, and carrier performance metrics |
 
 
 ## Key Logistics Metrics (DAX)
@@ -74,6 +74,17 @@ All SQL scripts used to build the database and run the analysis are in the [`sql
   <p align="center">
   <img src="./01_data_model_schema.png" width="700">
 </p>
+
+
+## 🗄️ SQL-скрипты
+
+Все SQL-скрипты, использованные для создания базы данных и проведения анализа, находятся в папке [`sql/`](./sql):
+
+| Файл | Описание |
+|------|----------|
+| [`01_create_tables.sql`](./sql/01_create_tables.sql) | Создание полной структуры базы данных |
+| [`02_insert_data.sql`](./sql/02_insert_data.sql) | Генерация 500+ реалистичных записей о поставках |
+| [`03_analysis_queries.sql`](./sql/03_analysis_queries.sql) | Расчёт OTIF, потерь от демереджа и показателей эффективности перевозчиков |
 
 
 ## Ключевые логистические метрики (DAX)
