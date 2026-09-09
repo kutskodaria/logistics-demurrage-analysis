@@ -26,6 +26,17 @@
 </p>
 
 
+## 🗄️ SQL Scripts
+
+All SQL scripts used to build the database and run the analysis are in the [`sql/`](./sql) folder:
+
+| Script | Description |
+|--------|-------------|
+| `01_create_tables.sql` | Creates the full database schema |
+| `02_insert_data.sql` | Generates 500+ realistic shipment records |
+| `03_analysis_queries.sql` | Calculates OTIF, demurrage losses, and carrier performance metrics |
+
+
 ## Key Logistics Metrics (DAX)
 * **OTIF % (On-Time In-Full Rate):** Evaluates carrier reliability by tracking deliveries made on or before the planned target date.
 * **Total Demurrage Losses (USD):** Aggregates financial penalties directly correlated with carrier performance.
